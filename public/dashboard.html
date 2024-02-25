@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Dashboard</title>
+    <link rel="stylesheet" href="./css/dashboard_style.css">
+</head>
+
+<body>
+
+    <header class="but">
+        <h1>Student Performance Dashboard</h1>
+        <form action='/Home' method="post">
+            <button id="nexttest">NEXT TEST</button>
+        </form>
+    </header>
+
+    <div class="dashboard">
+
+        <h2>Student Information</h2>
+        <table>
+            <tr>
+                <th>Student Name</th>
+                <th>Student ID</th>
+                <th>Total Score</th>
+                <th>Rank</th>
+            </tr>
+            <tr>
+                <td id="username_tag">John Doe</td>
+                <td>123456</td>
+                <td id='totalScore'>00</td>
+                <td>1</td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </table>
+
+        <h2>Question-wise Performance</h2>
+        <table>
+            <tr>
+                <th></th>
+                <th>Easy</th>
+                <th>Medium</th>
+                <th>Hard</th>
+            </tr>
+            <tr>
+                <td>Questions Solved</td>
+                <td id="easyScore">00</td>
+                <td id="mediumScore">00</td>
+                <td id="hardScore">00</td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </table>
+
+        <h2>Topic-wise Performance</h2>
+        <div class="strong-weak-topic">
+            <table id="topic_table_tag">
+                <tr>
+                    <th>Strong topic</th>
+                    <th>Weak topic</th>
+                </tr>
+                <!-- <tr>
+                    <td>displace</td>
+                    <td>data science</td>
+                </tr>
+                <tr>
+                    <td>headshot</td>
+                    <td>dies</td>
+                </tr> -->
+                <!-- Add more rows as needed -->
+
+            </table>
+        </div>
+        <div class="detainres">
+            <table id="questio_detail_table">
+                <tr>
+                    <th>Topic</th>
+                    <th>Question</th>
+                    <th>Student Selected Answer</th>
+                    <th>Correct Answer</th>
+                    <th>Time Taken</th>
+                    <th>Average Time of other Student</th>
+                </tr>
+                <!-- <tr>
+                    <td>Question 1</td>
+                    <td>Question 1</td>
+                    <td>Option A</td>
+                    <td>Option B</td>
+                    <td>30 seconds</td>
+                    <td>25 seconds</td>
+                </tr>
+                <tr>
+                    <td>Question 1</td>
+                    <td>Question 2</td>
+                    <td>Option C</td>
+                    <td>Option C</td>
+                    <td>40 seconds</td>
+                    <td>35 seconds</td>
+                </tr> -->
+                <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Placeholder for Pie Chart -->
+        <div class="chart-container">
+            <h2>Pie Chart: Correct vs Wrong Questions</h2>
+            <canvas id="pieChart"></canvas>
+        </div>
+
+        <!-- Placeholder for Graph -->
+        <div class="graph-container">
+            <h2>Overall Performance Graph</h2>
+            <canvas id="lineChart"></canvas>
+        </div>
+
+    </div>
+
+    <!-- Include Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Include your custom JavaScript file -->
+    <script type="module" src="./js/dashboard_script.js"></script>
+</body>
+
+</html>
